@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - BabyChat</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .Canva1 {
+            background-color: #F4F5F7;
+            width: 500px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .header .title {
+            font-size: 30px;
+            text-align: center;
+            margin-left: 0;
+            margin-right: 30px; /* Espacio entre la imagen y el título */
+        }
+
+        .header .imagen {
+            margin-left: 30px;
+            width: 150px;
+            height: 150px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+            gap: 15px; /* Espacio entre columnas */
+        }
+
+        .form-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-item label {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .form-item input,
+        .form-item select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #ffffff56;
+        }
+
+        /* Campos que ocupan el ancho completo */
+        .form-item.full-width {
+            grid-column: span 2;
+        }
+
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            width: 45%;
+            background-color: #515c6d;
+            padding: 8px;
+            color: #ffffff;
+            transition: transform 0.2s;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .volver {
+            width: 45%;
+            background-color: #515c6d;
+            padding: 8px;
+            color: #ffffff;
+            transition: transform 0.2s;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .volverrr {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 13px;
+        }
+
+        button:hover, .volver:hover {
+            transform: scale(1.05);
+        }
+
+        .cuenta {
+            margin-top: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+        /* Estilo de vista de contraseña */
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-container input[type="password"],
+        .password-container input[type="text"] {
+            width: 100%;
+            padding-right: 40px; /* Espacio para el ícono */
+        }
+
+        .password-container .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="Canva1">
+            <div class="header">
+                <p class="title">Iniciar sesión</p>
+                <img src="babyChat.png" class="imagen">
+            </div>
+            <form action="iniciar_sesion.php" method="POST">
+                <div class="form-grid">
+                    <div class="form-item full-width">
+                        <label for="email">Correo:</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+                    
+                    <div class="form-item full-width">
+                        <label for="contrasena">Contraseña:</label>
+                        <div class="password-container">
+                            <input type="password" id="contrasena" name="contrasena" required>
+                            <img src="ocultar.png" class="toggle-password" onclick="togglePassword()" alt="Mostrar/Ocultar Contraseña">
+                        </div>
+                    </div>
+                    <script> //Permite eligir mostrar/ocultar la contraseña
+                        function togglePassword() {
+                            var passwordInput = document.getElementById('contrasena');
+                            var eyeIcon = document.querySelector('.toggle-password');
+                
+                            if (passwordInput.type === 'password') {
+                                passwordInput.type = 'text'; // Muestra la contraseña
+                                eyeIcon.src = 'mostrar.png'; // Cambia el ícono a 'ojo cerrado'
+                            } else {
+                                passwordInput.type = 'password'; // Oculta la contraseña
+                                eyeIcon.src = 'ocultar.png'; // Cambia el ícono a 'ojo abierto'
+                            }
+                        }
+                    </script>
+                </div>
+
+                <div class="button-container">
+                    <div class="volver">
+                        <a class="volverrr" href="registro_padre.html">Registrate</a>
+                    </div>
+                    <button type="submit">Iniciar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

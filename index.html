@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Baby - Chat</title>
+        <style>
+            body {
+                background-color: #ffffff;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            img {
+                display: flex;
+                width: 30%;
+                height: 30%;
+                margin-left: 35%;
+                display: flex;
+                margin-bottom: none;
+                margin-top: 5%;
+            }
+
+            h1 {
+                font-weight: bold;
+                font-size: 70px;
+                text-align: center;
+                margin-top: 5%;
+                margin-bottom: 60px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: normal;}
+
+            main {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                margin-bottom: 80px;
+            }
+
+            .mnbcvc {
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 10%;
+                margin-top: none;
+                font-style: normal;
+            }
+
+            .nlkjh {
+                text-align: center;
+                font-style: normal;
+                font-size: 15px;
+            }
+
+            .njmk {
+                width: 60%;
+                margin-left: 20%;;
+                font-style: normal;
+                font-size: 20px;
+            }
+
+            .Canva1 {
+                width: 650px;
+                height: 450px;
+                align-items: center;
+                overflow: hidden;
+                background-color: #F4F5F7;
+                border: #515c6d;
+                margin-bottom: 200px;
+            }
+
+            .lop {
+                margin-top: 30px;
+                background-color: #515c6d;
+                padding: 8px;
+                border: #ccc;
+                width: 40%;
+                margin-left: 30%;
+                text-align: center;
+                transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves para el color de fondo y escala */
+            }
+
+            .button1 {
+                text-decoration: none;
+                color: #ffffff;
+            }
+
+            .klop {
+                margin-top: 10px;
+                padding: 8px;
+                width: 40%;
+                margin-left: 30%;
+                text-align: center;
+                transition: 0.3s, transform 0.2s;
+            }
+
+            .button2 {
+                color: #515c6d;
+            }
+
+            .zxcv {
+                margin-top: 60px;
+                margin-bottom: 60px;
+                background-color: #ccc;
+                width: 100%;
+                height: 100px;
+            }
+
+            .lop:hover, .klop:hover {
+                transform: scale(1.05); /* Escala ligeramente al pasar el cursor */
+            }
+
+            /* Holja 2 */
+
+            .njmk {
+                font-weight: none;
+                font-style: normal;
+                margin-bottom: 0;
+                text-align: center;
+            }
+
+            .dreq {
+                width: 40%;
+                height: 100%;
+                margin-top: 0;
+            }
+
+            .pluto {
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: normal;
+            }
+
+            .indice {
+                text-align: left;
+                font-size: 23px;
+                margin-left: 5%;
+                margin-bottom: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: normal;
+            }
+
+            .text {
+                margin-top: 15px;
+                text-align: left;
+                font-size: 18px;
+                margin-left: 5%;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: normal;
+            }
+
+            /* Parte de Leydi */
+            .flex-card-wrapper {
+                margin-top: 60px;
+                margin-bottom: 120px;
+                flex-wrap: wrap;
+                gap: 60px; /* Ajusta el espacio entre tarjetas si es necesario */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flex-card-container {
+                position: relative;
+                border: 1.5px solid #ccc;
+                border-radius: 15px;
+                width: 250px; /* Ajusta el tamaño según tus necesidades */
+                height: 375px; /* Ajusta la altura según tus necesidades */
+                overflow: hidden;
+                cursor: pointer;
+                box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del contenedor */
+                padding: 0; /* Asegúrate de que no haya padding */
+                margin: 0; /* Asegúrate de que no haya margen */
+                transition: transform 0.3s ease;
+                
+            }
+
+            .flex-card-container:hover {
+                transform: scale(1.25); /* Escala la tarjeta al pasar el cursor sobre ella */
+            }
+
+            .flex-card-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionar la imagen */
+                display: block;
+                margin: 0;
+            }
+
+            .description {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                padding: 10px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                box-sizing: border-box; /* Incluye el padding en el tamaño total */
+            }
+
+            .flex-card-container:hover .description {
+                opacity: 1;
+            }
+
+            .pppp {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            /* Hoja 3 */
+
+            .back {
+                display: flex;
+                background-color: #ccc;
+                width: 100%;
+                height: 400px;
+                margin: 0;
+                align-items: center;
+            }
+
+            .estamos {
+                margin-left: 30%;
+                margin-right: 30%;
+                text-align: center;
+                font-size: 30px;
+            }
+
+            .unete {
+                margin-top: 100px;
+                margin-bottom: 80px;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .info {
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 200px;
+                border-bottom: 30px;
+            }
+
+            .boton {
+                display: flex;
+                width: 300px;
+                height: 50px;
+                margin-left: 40px;
+                background-color: #ffffffb1;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                align-items: center;
+                transition: background-color 0.3s, transform 0.2s;
+            }
+
+            .boton:hover {
+                background-color: #e0e0e0;
+                transform: scale(1.15); /* Escala ligeramente al pasar el cursor */
+            }
+
+            .no1 {
+                text-decoration: none;
+                margin-left: 30px;
+                color: black;
+            }
+
+            /* footer */
+
+            footer {
+                display: flex;
+                width: 100%;
+                background-color: #ccc;
+                height: 60px;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .saas {
+                font-size: 20px;
+                font-style: oblique;
+                text-align: center;   
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bienvenido a "BabyChat"</h1>
+        <main>
+            <div class="Canva1">
+                <div class="container1">
+                    <img src="Logo.png" alt="Logo de BabyChat">
+                    <p class="mnbcvc">Conoce a tu bebé en BabyChat</p>
+                    <p class="nlkjh">Para continuar, inicie sesion en su cuenta.</p>
+                    <div class="lop">
+                        <a class="button1" href="registro_padre.html">Registrate</a>
+                    </div>
+                    <div class="klop">
+                        <a class="button2" href="iniciar_sesion.html">Iniciar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <p class="njmk">Bienvenida a BabyChat, donde acompañamos a los padres en cada paso del emocionante y desafiante primer año de vida de sus bebés. Ya seas  un padre/madre primeriza o con experiencia, asi como tambien alguien interesado, aquí encontrarás el apoyo y la información que necesitas para cuidar a tu pequeño con confianza.</p>
+        <div class="zxcv"></div>
+        <p class="pluto">¿Qué encontrarás en nuestro sitio?</p>   
+        <!-- Parte de Leydi -->
+        <!-- Agregar componentes de tarjeta con imágenes -->
+        <div class="flex-card-wrapper">
+            <article class="flex-card-container">
+                <p class="pppp">01.- Desarrollo del bebe</p>
+                <img src="desarrollobb.jpeg" alt="desarrollobb"> <!-- Ruta de la imagen de desarrollo -->
+                <div class="description">
+                    <p class="text">■ Sigue de cerca los mítos más importantes y aprende cómo estimular y apoyar el crecimiento saludabel de tú bebé.</p>
+                </div>
+            </article>
+            <article class="flex-card-container">
+                <p class="pppp">02.- Guía de salud</p>
+                <img src="saludbb.jpeg" alt="saludbb"> <!-- Ruta de la imagen de salud -->
+                <div class="description">
+                    <p class="text">■ Descubre cómo manejar las enfermedades comúnes y mantener a tu bebé sano y felíz.</p>
+                </div>
+            </article>
+            <article class="flex-card-container">
+                <p class="pppp">03.- Cuidado diario</p>
+                <img src="cuidado_saludbb.jpeg" alt="cuidado_saludbb"> <!-- Ruta de la imagen de cuidado -->
+                <div class="description">
+                    <p class="text">■ Encuentra las mejores prácticas para la alimentacion, el sueño y la higiene de tu bebé.</p>
+                </div>
+            </article>
+            <article class="flex-card-container">
+                <p class="pppp">04.- Bienestar emocional</p>
+                <img src="bienestaremocional.jpeg" alt="bienestaremocional"> <!-- Ruta de la imagen de bienestar -->
+                <div class="description">
+                    <p class="text">■ Aprende a cuidar de tu salud mental y emocional mientras enfrentas los desafios de la maternidad.</p>
+                </div>
+            </article>
+        </div>
+        <div class="back">
+            <p class="estamos">Estamos aqui para ayudarte a disfrutar cada momento con tu bebé, brindándote las herramientas y el conocimiento que necesitas para ser la mejor Padre/Madre que puedas ser.</p>
+        </div>
+        <h4 class="unete">¡Únete a nososotros y haz que el primer año de vida de tu bebé sea inovidable!</h4>
+        <div class="info">
+            <div class="boton">
+                <a class="no1" href="">Información de contacto</a>
+            </div>
+            <div class="boton">
+                <a class="no1" href="">Redes Sociales</a>
+            </div>
+            <div class="boton">
+                <a class="no1" href="">Políticas de uso</a>
+            </div>
+            <div class="boton">
+                <a class="no1" href="">Derechos de Autor</a>
+            </div>
+        </div>
+    </body>
+    <footer class="footer">
+        <p class="saas">&copy; 2024 BabyChat. Todos los derechos reservados</p>
+    </footer>
+</html>
